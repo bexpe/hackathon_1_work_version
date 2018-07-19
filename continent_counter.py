@@ -3,11 +3,13 @@ import operator
 
 list_of_tiles = []
 list_of_close_tiles = []
+world_size_x = input('Welcome! Now enter an integer. Your world should have size of: ');
+world_size_y = input('Since we want it to be a 2D world, please enter another integer of your choice: ');
 
 
 def generate_random_world():
     random.seed()
-    list_of_tiles = [(random.randint(0, 11), random.randint(0, 11)) for k in range(30)]  # here we have to add some code to not repeat tiles
+    list_of_tiles = [(random.randint(0, world_size_x), random.randint(0, world_size_y)) for k in range(30)]  # here we have to add some code to not repeat tiles
     return list_of_tiles
 
 
